@@ -23,7 +23,7 @@ class ShortestPathDijkstraTest {
     }
 
     @Test
-    void test() {
+    void testSimpleDiGraph() {
         graph = GraphPathTestUtils.sampleGraphOne(); 
         ShortestPathDijkstra algorithm = new ShortestPathDijkstra(graph,0);
         assertEquals(0, 0);
