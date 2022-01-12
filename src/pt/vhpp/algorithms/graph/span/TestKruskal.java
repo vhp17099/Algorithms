@@ -1,4 +1,4 @@
-package pt.vhpp.algorithms.mst;
+package pt.vhpp.algorithms.graph.span;
 
 import java.util.LinkedList;
 import java.util.List;
