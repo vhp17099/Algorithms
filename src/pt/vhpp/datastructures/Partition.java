@@ -13,9 +13,11 @@ package pt.vhpp.datastructures;
  */
 public class Partition {
     private int[] partition;
+    private int numberOfSets;
 
     public Partition(int nElems) {
         partition = new int[nElems];
+        numberOfSets = nElems;
         for (int i = 0; i < nElems ; i++) {
             partition[i] = -1;
         }
@@ -42,12 +44,25 @@ public class Partition {
         int setA = find(first);
         int setB = find(second);
 
-        if(partition[setA] <= partition[setB]) {
+        if(partition[setA] == partition[setB]) {
+            return; // already joined, quit
+        } else if(partition[setA] < partition[setB]) {
             partition[setA] = partition[setA] + partition[setB];
             partition[setB] = setA;
         } else {
             partition[setB] = partition[setB] + partition[setA];
             partition[setA] = setB;
         }
+        numberOfSets--; // Two sets merged
     }
+
+    public boolean sameSet(int a, int b) {
+        return find(a) == find(b);
+    }
+
+    public int sizeOfSet(int value) {
+        return find(value)*-1; // Parent holds the size as a negative number
+    }
+
+    public int getNumberOfSets() { return numberOfSets; }
 }

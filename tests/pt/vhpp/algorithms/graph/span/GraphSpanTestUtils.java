@@ -7,6 +7,16 @@ import pt.vhpp.datatypes.SimpleGraphArc;
 
 public class GraphSpanTestUtils {
 
+    public static int simpleUndirectedNodeCount() { return 4; }
+    public static List<SimpleGraphArc> simpleUndirectedGraph() {
+        List<SimpleGraphArc> arcs = new LinkedList<SimpleGraphArc>();
+        arcs.add(new SimpleGraphArc(0,1,4));
+        arcs.add(new SimpleGraphArc(1,2,1));
+        arcs.add(new SimpleGraphArc(2,3,2));
+        arcs.add(new SimpleGraphArc(3,1,5));
+        return arcs;
+    }
+
     public static int swerc07IPDataSetGraphSize() { return 4;}
     public static List<SimpleGraphArc> swerc07IPTVDataSet() {
         // " The example of usage will be based on a SWERC 2007 problem named IP-TV."
