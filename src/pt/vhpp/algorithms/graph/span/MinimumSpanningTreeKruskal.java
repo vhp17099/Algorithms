@@ -43,8 +43,8 @@ public class MinimumSpanningTreeKruskal {
 
         while(minimumSpanningTree.size() < maxSize) {
             SimpleGraphArc arc = arcQueue.poll();
-            int disjointSetA = unionFind.find(arc.getA());
-            int disjointSetB = unionFind.find(arc.getB());
+            int disjointSetA = unionFind.find(arc.getFrom());
+            int disjointSetB = unionFind.find(arc.getTo());
 
             if( disjointSetA != disjointSetB) {
                 unionFind.union(disjointSetA, disjointSetB);

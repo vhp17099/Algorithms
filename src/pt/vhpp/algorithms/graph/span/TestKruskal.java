@@ -53,7 +53,7 @@ public class TestKruskal {
         System.out.println("Result, total mst cost:");
         System.out.println(mst.getCostOfMinimumSpanningTree());
         for(SimpleGraphArc arc : result) {
-            System.out.println(cities[arc.getA()]+" - "+cities[arc.getB()]+" : "+arc.getCost());
+            System.out.println(cities[arc.getFrom()]+" - "+cities[arc.getTo()]+" : "+arc.getCost());
         }
     }
 

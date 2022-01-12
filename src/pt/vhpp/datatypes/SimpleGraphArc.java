@@ -1,31 +1,31 @@
 package pt.vhpp.datatypes;
 
 public class SimpleGraphArc implements Comparable<SimpleGraphArc> {
-    private Integer a;
-    private Integer b;
+    private Integer from;
+    private Integer to;
     private Integer cost;
 
-    public SimpleGraphArc(int a, int b, int cost) {
+    public SimpleGraphArc(int from, int to, int cost) {
         super();
-        this.a = a;
-        this.b = b;
+        this.from = from;
+        this.to = to;
         this.cost = cost;
     }
 
-    public int getA() {
-        return a;
+    public int getFrom() {
+        return from;
     }
 
-    public void setA(int a) {
-        this.a = a;
+    public void setFrom(int from) {
+        this.from = from;
     }
 
-    public int getB() {
-        return b;
+    public int getTo() {
+        return to;
     }
 
-    public void setB(int b) {
-        this.b = b;
+    public void setTo(int to) {
+        this.to = to;
     }
 
     public int getCost() {
@@ -39,10 +39,10 @@ public class SimpleGraphArc implements Comparable<SimpleGraphArc> {
     public int compareTo(SimpleGraphArc arc) {
         int comp = cost.compareTo(arc.getCost());
         if (comp == 0) {
-            comp = a.compareTo(arc.getA());
+            comp = from.compareTo(arc.getFrom());
         }
         if (comp == 0) {
-            comp = b.compareTo(arc.getB());
+            comp = to.compareTo(arc.getTo());
         }
         return comp;
     }
