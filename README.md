@@ -1,6 +1,11 @@
 # Algorithms
 This is a generic list of Algorithm Implementations in Java that are recycled from an old notebook from Programming Competitions.
 
+### Mathematics
+* Euclid's Greatest Common Divisor
+* Least Common Multiple via Euclid's Greatest Common Divisor
+* Modular Inverse also using Euclid's Greatest Common Divisor
+
 ### Data Structures
 * Partition for Union Find and Disjoint Sets
 * Prime Sieve based on Erastosthenes Sieve
