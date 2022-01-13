@@ -45,4 +45,7 @@ public class MiscMathAlgorithms {
         }
         return v;
     }
+
+    // TODO Permutations
+    // TODO Combinations
 }
