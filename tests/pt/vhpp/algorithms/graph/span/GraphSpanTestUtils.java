@@ -7,6 +7,29 @@ import pt.vhpp.datatypes.SimpleGraphArc;
 
 public class GraphSpanTestUtils {
 
+    // https://en.wikipedia.org/wiki/Topological_sorting#Examples
+    public static List<Integer>[] simpleDiGraph() {
+        LinkedList<Integer>[] graph = new LinkedList[8]; 
+        graph[0] = new LinkedList<Integer>();
+        graph[0].add(3);
+        graph[1] = new LinkedList<Integer>();
+        graph[1].add(3);
+        graph[1].add(4);
+        graph[2] = new LinkedList<Integer>();
+        graph[2].add(4);
+        graph[2].add(7);
+        graph[3] = new LinkedList<Integer>();
+        graph[3].add(5);
+        graph[3].add(6);
+        graph[3].add(7);
+        graph[4] = new LinkedList<Integer>();
+        graph[4].add(6);
+        graph[5] = new LinkedList<Integer>();
+        graph[6] = new LinkedList<Integer>();
+        graph[7] = new LinkedList<Integer>();
+        return graph;
+    }
+
     public static int simpleUndirectedNodeCount() { return 4; }
     public static List<SimpleGraphArc> simpleUndirectedGraph() {
         List<SimpleGraphArc> arcs = new LinkedList<SimpleGraphArc>();
