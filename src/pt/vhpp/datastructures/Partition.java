@@ -44,7 +44,7 @@ public class Partition {
         int setA = find(first);
         int setB = find(second);
 
-        if(partition[setA] == partition[setB]) {
+        if(setA == setB) {
             return; // already joined, quit
         } else if(partition[setA] < partition[setB]) {
             partition[setA] = partition[setA] + partition[setB];
